@@ -27,7 +27,7 @@ extension IsolatedHiveX on IsolatedHiveInterface {
 
     String? path;
     if (!kIsWeb) {
-      final appDir = await getApplicationDocumentsDirectory();
+      final appDir = await getApplicationSupportDirectory();
       path = path_helper.join(appDir.path, subDirectory);
     }
 
